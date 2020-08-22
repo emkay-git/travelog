@@ -12,6 +12,7 @@ import * as olProj from 'ol/proj';
 import TileLayer from 'ol/layer/Tile';
 import {Vector } from 'ol/source';
 import {Destination } from '../models/destination.interface';
+import TileJSON from 'ol/source/TileJSON';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -26,14 +27,17 @@ export class MapComponent implements OnInit {
   popup: any;
   content: any;
   showDialog: boolean;
+  locationList: Destination[] = [];
+  hoveredPlace: Destination = {} as Destination;
 
   constructor() { }
   
   ngOnInit(): void {
 
-    fetch("../assets/location.json").then((data) => data.json()).then(
+    fetch("assets/data/location.json").then((data) => data.json()).then(
       (data) => 
      { 
+      this.locationList =  data['places'];
       this.initMap(data['places']);
       this.addTeaserOverlay();
       this.addEventsOnMap();
@@ -78,13 +82,17 @@ export class MapComponent implements OnInit {
       target: 'map',
       layers: [
         new TileLayer({
-          source: new OSM()
+          // source: new OSM()
+          source: new TileJSON({
+            url: 'https://a.tiles.mapbox.com/v3/aj.1x1-degrees.json?secure=1',
+            crossOrigin: 'anonymous',
+          }),
         }), this.markerLayers(destination)
       ]
       ,
       view: new View({
         center: olProj.fromLonLat([77.1025,28.7041 ]),
-        zoom: 5
+        zoom:4
       })
     });
 
@@ -106,12 +114,15 @@ export class MapComponent implements OnInit {
         return;
       }
       let feature = this.checkFeature(e);
+      document.getElementById('map').style.cursor = feature? 'pointer':'';
       if(feature) {
         var coordinates = feature.getGeometry().getCoordinates();
         this.popup.setPosition(coordinates);
         let button =  document.getElementById('popup');
-        console.log(feature.get('name'));
+        let placeId = feature.get('name').split(":")[1];
+        this.hoveredPlace = this.locationList.find((place:Destination) => place.id == placeId);
         button.click();
+       
       }
       else this.popup.setPosition(null);
     });
@@ -140,10 +151,9 @@ export class MapComponent implements OnInit {
     
     //create a bunch of icons and add to source vector
     for (let i=0;i<destination.length;i++){
-      console.log(destination[i]);
         let iconFeature = new Feature({
           geometry: new Point(olProj.transform([destination[i].lon,destination[i].lat], 'EPSG:4326',   'EPSG:3857')),
-        name: destination[i].title,
+        name: destination[i].title+":"+destination[i].id,
         });
         vectorSource.addFeature(iconFeature);
     }
@@ -155,11 +165,11 @@ export class MapComponent implements OnInit {
         anchorXUnits: 'fraction',
         anchorYUnits: 'pixels',
         opacity: 0.75,
-        src: 'https://icons.iconarchive.com/icons/hopstarter/button/16/Button-Add-icon.png'    
+        src: 'https://icons.iconarchive.com/icons/icons8/windows-8/24/Maps-Geo-Fence-icon.png'
       }))
     });
 
-
+//https://icons.iconarchive.com/icons/hopstarter/button/16/Button-Add-icon.png
 
     //add the feature vector to the layer vector, and apply a style to whole layer
     let vectorLayer = new VectorLayer({

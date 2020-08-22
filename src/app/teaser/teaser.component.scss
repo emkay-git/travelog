@@ -1,0 +1,24 @@
+.img-background{
+    position: relative;
+    width:200px;
+    margin:10px;
+    height:200px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.detail{
+    padding:10px;
+    height: auto;
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    position: absolute;
+    bottom:0;
+}
+
+.bottom-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

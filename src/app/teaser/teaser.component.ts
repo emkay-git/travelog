@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-teaser',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeaserComponent implements OnInit {
 
+
+  @Input() title: String = '';
+  @Input() placeName: String = '';
+  @Input() backgroundImage: String = '';
   constructor() { }
 
   ngOnInit(): void {
+   
+  }
+
+  ngOnChanges() {
+    console.log(this.title);
   }
 
 }

@@ -1,0 +1,58 @@
+{
+    "places": [
+        {
+            "id": "1",
+            "lat": "18.5096006",
+            "lon": "73.4110312",
+            "title": "Andharban",
+            "teaseText": "Into the forest",
+            "teaseImage":"andharban.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "2",
+            "lat": "26.8854479",
+            "lon": "75.6504703",
+            "title": "Jaipur",
+            "teaseText": "The lit Memoir",
+            "teaseImage":"jaipur.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "3",
+            "lat": "23.3434577",
+            "lon": "85.1812384",
+            "title": "Ranchi",
+            "teaseText": "2.5?",
+            "teaseImage":"ranchi.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "4",
+            "lat": "27.5142",
+            "lon": "90.4336",
+            "title": "Bhutan",
+            "teaseText": "Kind'a Foreign Trip",
+            "teaseImage":"bhutan.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "5",
+            "lat": "32.0486908",
+            "lon": "75.0236627",
+            "title": "Kartarpur",
+            "teaseText": "Seema Paar",
+            "teaseImage":"kartarpur.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "6",
+            "lat": "11.618349",
+            "lon": "92.6520034",
+            "title": "Andaman",
+            "teaseText": "Stuck on the Islands",
+            "teaseImage":"andaman.jpg",
+            "storyText": ""
+        }
+    ]
+}
