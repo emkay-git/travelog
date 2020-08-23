@@ -163,9 +163,9 @@ export class MapComponent implements OnInit {
       image: new Icon(({
         anchor: [0.5, 0.5],
         anchorXUnits: 'fraction',
-        anchorYUnits: 'pixels',
-        opacity: 0.75,
-        src: 'https://icons.iconarchive.com/icons/icons8/windows-8/24/Maps-Geo-Fence-icon.png'
+        anchorYUnits: 'fraction',
+        opacity: 1,
+        src: 'https://icons.iconarchive.com/icons/icons8/windows-8/16/Maps-Geo-Fence-icon.png'
       }))
     });
 
