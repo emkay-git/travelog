@@ -13,8 +13,8 @@
             "id": "2",
             "lat": "26.8854479",
             "lon": "75.6504703",
-            "title": "Jaipur",
-            "teaseText": "The lit Memoir",
+            "title": "Jaipur, Alwar, Ranthambore",
+            "teaseText": "Escaping Delhi",
             "teaseImage":"jaipur.jpg",
             "storyText": ""
         },
@@ -53,6 +53,142 @@
             "teaseText": "Stuck on the Islands",
             "teaseImage":"andaman.jpg",
             "storyText": ""
+        },
+        {
+            "id": "7",
+            "lat": "19.8700826",
+            "lon": "75.2351603",
+            "title": "Aurangabad",
+            "teaseText": "Cavemen",
+            "teaseImage":"aurangabad.jpg",
+            "storyText": ""
+        },
+      
+     
+        {
+            "id": "8",
+            "lat": "15.5567185",
+            "lon": "73.7463912",
+            "title": "Goa",
+            "teaseText": "Because once is not Enough!",
+            "teaseImage":"goa.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "9",
+            "lat": "9.2867184",
+            "lon": "79.3028783",
+            "title": "Rameswaram, Madurai, Hogenakkal",
+            "teaseText": "Family Trip 1.0",
+            "teaseImage":"rameswaram.jpg",
+            "storyText": ""
+        }, 
+        {
+            "id": "10",
+            "lat": "12.3106368",
+            "lon": "76.5656485",
+            "title": "Mysore,Ooty, Coorg",
+            "teaseText": "Escaped the Virus",
+            "teaseImage":"mysore.jpg",
+            "storyText": "<h2>March 3, 2020.</h2>Began the 4th road trip with the family 🚘. By now It had become a ritual to be out on the roads when everyone else was celebrating Holi or Diwali. Reached Banglore. Picked Zoomcar. And hit the road. Ooty, Mysore, Coorg we were coming. <br> Every place we visited, I hadn't seen anything similar. I saw the Mysore Palace. Stood in the middle of the Tea Garden on mountains from where I could see the endless clouds below me. Rode the toy Train. Always wanted to. (It wasn't that exciting though).Then there was The pretty lake, The Tea Factory, The elephants so close. Golden temple of the South was indeed impressive. But the visual treat to the eyes was when the Mysore palace lit its 1lakh bulbs. Just beautiful.  <br> And yes all this happened just a few weeks before everything stood still in India. Hoping to start another road trip soon. Writing another story soon.",
+            "storyImageId":"mysore",
+            "storyImages": [
+                {
+                    "caption":"Early Morning scenes &#128540;<br> Starting at Delhi Airport",
+                    "imageUrl":"assets/story-photos/mysore/mysore_0.jpg"
+                    
+                },
+                {
+                    "caption":"After eating a Dosa.😋 <br> Behind us is the Mysore palace",
+                    "imageUrl":"assets/story-photos/mysore/mysore_1.jpg"
+                    
+                },
+                {
+                    "caption":"The inside - Pretty Pillars and Dome;",
+                    "imageUrl":"assets/story-photos/mysore/mysore_2.jpg"
+                    
+                },
+                {
+                    "caption":"The pine trees missed in Kodai finally found near Ooty",
+                    "imageUrl":"assets/story-photos/mysore/mysore_3.jpg"
+                    
+                },
+                {
+                    "caption":"Early Morning, no human, pretty nature",
+                    "imageUrl":"assets/story-photos/mysore/mysore_4.jpg"
+                    
+                },
+                {
+                    "caption":"Aaj mai upar, asmaan neeche 🤗",
+                    "imageUrl":"assets/story-photos/mysore/mysore_5.jpg"
+                    
+                },
+                {
+                    "caption":"Overrated or not, had to ride it once.<br> I wish mausam thoda awesome hota",
+                    "imageUrl":"assets/story-photos/mysore/mysore_6.jpg"
+                    
+                },
+                {
+                    "caption":"While me and ma were in Toy train, papa and bhai busy in rose garden",
+                    "imageUrl":"assets/story-photos/mysore/mysore_7.jpg"
+                    
+                },
+                {
+                    "caption":"Yes tea was good only in the factory🤷‍♂️",
+                    "imageUrl":"assets/story-photos/mysore/mysore_8.jpg"
+                    
+                },
+                {
+                    "caption":"Katwaa liya Coorg aake ",
+                    "imageUrl":"assets/story-photos/mysore/mysore_9.jpg"
+                    
+                },
+                {
+                    "caption":"🐘",
+                    "imageUrl":"assets/story-photos/mysore/mysore_10.jpg"
+                    
+                },
+                {
+                    "caption":"Did you know there is a Golden Temple in South as well?",
+                    "imageUrl":"assets/story-photos/mysore/mysore_11.jpg"
+                    
+                },
+                {
+                    "caption":"And finally the dessert",
+                    "imageUrl":"assets/story-photos/mysore/mysore_12.jpg"
+                    
+                }
+              
+            ]
+        }, 
+      
+        {
+            "id": "11",
+            "lat": "27.1761571",
+            "lon": "77.9099719",
+            "title": "Agra",
+            "teaseText": "Agra ni Janaa",
+            "teaseImage":"agra.jpg",
+            "storyText": ""
+        }, 
+        {
+            "id": "12",
+            "lat": "23.0201818",
+            "lon": "72.4396538",
+            "title": "Ahemdabad,Ajmer",
+            "teaseText": "The place for food",
+            "teaseImage":"ahemdabad.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "13",
+            "lat": "30.7417338",
+            "lon": "79.4852149",
+            "title": "Badrinath, Auli",
+            "teaseText": "2 Dhaam",
+            "teaseImage":"badrinath.jpg",
+            "storyText": ""
         }
+      
     ]
 }

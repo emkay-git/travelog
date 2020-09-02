@@ -26,9 +26,10 @@ export class MapComponent implements OnInit {
   //what needs to be displayed.
   popup: any;
   content: any;
-  showDialog: boolean;
+  showDialog: boolean = false;
   locationList: Destination[] = [];
   hoveredPlace: Destination = {} as Destination;
+  clickedPlace: Destination = {} as Destination;
 
   constructor() { }
   
@@ -99,14 +100,21 @@ export class MapComponent implements OnInit {
   }
 
   addEventsOnMap() {
+    this.showDialog = false;
     this.map.on('click', (e) => {
       if(this.checkFeature(e)) {
-       let button =  document.getElementById('buttonText');
-    
+     
+       this.showDialog = true;
+       if(this.hoveredPlace&&this.hoveredPlace['storyImages']&&this.hoveredPlace['storyImages'].length>0) {
+        this.clickedPlace = this.hoveredPlace;
+       }
+       else this.clickedPlace = {} as Destination;
+       setTimeout(() => {
+        let button =  document.getElementById('buttonText');
         button.click();
-        
+       },0);
+      
       }
-      else this.showDialog = false;
     }); 
   
     this.map.on('pointermove', (e) => {
@@ -170,7 +178,7 @@ export class MapComponent implements OnInit {
     });
 
 //https://icons.iconarchive.com/icons/hopstarter/button/16/Button-Add-icon.png
-
+//Image by <a href="https://pixabay.com/users/mmi9-1424200/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1315651">mmi9</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1315651">Pixabay</a>
     //add the feature vector to the layer vector, and apply a style to whole layer
     let vectorLayer = new VectorLayer({
       source: vectorSource,
@@ -179,3 +187,6 @@ export class MapComponent implements OnInit {
     return vectorLayer
   }
 }
+
+
+//Image by <a href="https://pixabay.com/users/bartekhdd-2657534/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1593045">bartekhdd</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1593045">Pixabay</a>

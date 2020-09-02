@@ -5,6 +5,7 @@ export interface Destination {
     title: String;
     teaseText: String;
     storyText: String;
-    storyImages: String[];
     teaseImage: String;
+    storyImageId: String;
+    storyImageCaptions: String[];
 }

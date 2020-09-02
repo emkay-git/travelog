@@ -21,6 +21,7 @@
     "@angular/router": "~10.0.9",
     "@types/openlayers": "^4.6.17",
     "bootstrap": "^5.0.0-alpha1",
+    "jquery": "^3.5.1",
     "ol": "6.4.3",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

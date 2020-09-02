@@ -8,12 +8,15 @@ import { Destination } from './models/destination.interface';
 })
 export class AppComponent {
   title = 'travelog';
+  data= [];
   showMap: boolean = false;
   public ngOnInit(): void {
     fetch("assets/data/location.json").then((data) => data.json()).then((data) => this.prefetchImages( data['places']))
+  
   }
 
   private prefetchImages(locations: Destination[]): void {
+    this.data = locations[9]['storyImages'];
     locations.forEach((dest: Destination) => {
       new Image().src = "assets/teaser-photos/"+dest.teaseImage;
     })

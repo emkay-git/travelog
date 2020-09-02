@@ -1,0 +1,47 @@
+  {
+            "id": "14",
+            "lat": "11.4118505",
+            "lon": "76.6584018",
+            "title": "Ooty",
+            "teaseText": "Ooooty",
+            "teaseImage":"goa.jpg",
+            "storyText": ""
+        }, 
+        {
+            "id": "15",
+            "lat": "12.4314275",
+            "lon": "75.7173602",
+            "title": "Coorg",
+            "teaseText": "Wrong Timing",
+            "teaseImage":"goa.jpg",
+            "storyText": ""
+        },
+
+           {
+            "id": "9",
+            "lat": "9.9178296",
+            "lon": "78.0527823",
+            "title": "Madurai",
+            "teaseText": "Meenakshi Temple",
+            "teaseImage":"andaman.jpg",
+            "storyText": ""
+        },
+        {
+            "id": "10",
+            "lat": "12.1182663",
+            "lon": "77.7738539",
+            "title": "Hogennakal Falls",
+            "teaseText": "Who Niagara?",
+            "teaseImage":"andaman.jpg",
+            "storyText": ""
+        },
+
+          {
+            "id": "8",
+            "lat": "27.5546242",
+            "lon": "76.5763348",
+            "title": "Alwar",
+            "teaseText": "And Jane was like HaHaHa",
+            "teaseImage":"andaman.jpg",
+            "storyText": ""
+        },

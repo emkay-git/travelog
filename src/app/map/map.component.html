@@ -14,22 +14,25 @@
 </button>
 
 
-<div id="dialog" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div  *ngIf="this.clickedPlace['storyImages']"  id="dialog" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{hoveredPlace['title']}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- <div class="modal-header">
+        
+     
+        </div> -->
+        <div class="modal-body" style="padding:0">
+          <!-- <button style="float:right; margin:2px" type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-          </button>
+          </button> -->
+          <!-- <h2 class="modal-title">{{hoveredPlace['teaseText']}}-{{hoveredPlace['title']}}</h2> -->
+          <app-story [storyText]="this.clickedPlace['storyText']" [data]="this.clickedPlace['storyImages']"></app-story>
+        
         </div>
-        <div class="modal-body">
-          <p>Stories coming soon!!</p>
-
-        </div>
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
+
