@@ -26,7 +26,6 @@ export class MapComponent implements OnInit {
   //what needs to be displayed.
   popup: any;
   content: any;
-  showDialog: boolean = false;
   locationList: Destination[] = [];
   hoveredPlace: Destination = {} as Destination;
   clickedPlace: Destination = {} as Destination;
@@ -100,20 +99,12 @@ export class MapComponent implements OnInit {
   }
 
   addEventsOnMap() {
-    this.showDialog = false;
     this.map.on('click', (e) => {
       if(this.checkFeature(e)) {
      
-       this.showDialog = true;
-       if(this.hoveredPlace&&this.hoveredPlace['storyImages']&&this.hoveredPlace['storyImages'].length>0) {
-        this.clickedPlace = this.hoveredPlace;
-       }
-       else this.clickedPlace = {} as Destination;
-       setTimeout(() => {
-        let button =  document.getElementById('buttonText');
-        button.click();
-       },0);
-      
+       this.clickedPlace = this.hoveredPlace;
+       let button =  document.getElementById('buttonText');
+       button.click();
       }
     }); 
   
@@ -134,6 +125,10 @@ export class MapComponent implements OnInit {
       }
       else this.popup.setPosition(null);
     });
+
+    document.addEventListener('hidden.bs.modal',() => {
+      this.clickedPlace = {} as Destination;
+    })
   }
 
   addTeaserOverlay() {

@@ -2,7 +2,6 @@
   <div class="row">
       <div id="map" class="col-md-12 shadow bg-white rounded m-3 p-2" ></div>
   </div>
-
 </div>
 
 
@@ -14,25 +13,13 @@
 </button>
 
 
-<div  *ngIf="this.clickedPlace['storyImages']"  id="dialog" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-      <div class="modal-content">
-        <!-- <div class="modal-header">
-        
-     
-        </div> -->
+<div id="dialog" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document modal-sm" [ngClass]="{'modal-xl':this.clickedPlace['storyImages']&&this.clickedPlace['storyImages'].length>0}">
+      <div class="modal-content"> 
         <div class="modal-body" style="padding:0">
-          <!-- <button style="float:right; margin:2px" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button> -->
-          <!-- <h2 class="modal-title">{{hoveredPlace['teaseText']}}-{{hoveredPlace['title']}}</h2> -->
-          <app-story [storyText]="this.clickedPlace['storyText']" [data]="this.clickedPlace['storyImages']"></app-story>
-        
+           <app-story [storyText]="this.clickedPlace['storyText']" [data]="this.clickedPlace['storyImages']"></app-story>
         </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div> -->
-      </div>
     </div>
   </div>
+</div>
 

@@ -16,7 +16,6 @@ export class AppComponent {
   }
 
   private prefetchImages(locations: Destination[]): void {
-    this.data = locations[9]['storyImages'];
     locations.forEach((dest: Destination) => {
       new Image().src = "assets/teaser-photos/"+dest.teaseImage;
     })
