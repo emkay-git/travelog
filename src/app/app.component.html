@@ -33,7 +33,7 @@
   </div>
 </section>
 
-<section id="photos" style="height: auto; font-size: 25px">
+<section id="photos">
   <ng-container *ngFor="let data of photoData">
     <app-teaser
       [placeName]="data.name"
@@ -45,5 +45,6 @@
 </section>
 
 <section id="travel">
+  I swear this would have been better without the Pandemic
   <app-map></app-map>
 </section>
