@@ -94,7 +94,11 @@ export class AppComponent {
   }
 
   scrollSection(elementId: string) {
-    let id = document.getElementById(elementId);
-    id.scrollIntoView({ behavior: 'smooth' });
+    if (elementId == 'code') {
+      window.open('https://github.com/emkay-git', '_blank').focus();
+    } else {
+      let id = document.getElementById(elementId);
+      id.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
