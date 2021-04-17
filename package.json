@@ -23,6 +23,8 @@
     "@types/openlayers": "^4.6.17",
     "bootstrap": "^5.0.0-alpha1",
     "jquery": "^3.5.1",
+    "less": "^4.1.0",
+    "ngx-typed-js": "^2.1.0",
     "ol": "6.4.3",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
