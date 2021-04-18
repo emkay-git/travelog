@@ -27,56 +27,56 @@ export class AppComponent {
       name: 'Pondicherry - January, 2021',
     },
     {
-      image: 'mysore.jpg',
+      image: 'mysore_2.jpg',
       name: 'Mysore - Ooty - Coorg - March, 2020',
     },
     {
-      image: 'agra.jpg',
+      image: 'agra_2.jpg',
       name: 'Agra - Feb, 2020',
     },
     {
-      image: 'ranchi.jpg',
+      image: 'jharkhand.jpg',
       name: 'Ranchi - Feb, 2020',
     },
     {
-      image: 'kartarpur.jpg',
-      name: 'Kartarpur Corridor - Feb, 2020',
+      image: 'kartarpur_2.jpg',
+      name: 'Kartarpur Corridor - January, 2020',
     },
     {
       image: 'alwar.jpg',
-      name: 'Alwar, Bharathpur Sanct - Feb, 2020',
+      name: 'Alwar, Bharathpur Sanct - December, 2020',
     },
     {
-      image: 'andaman.jpg',
-      name: 'Andaman Islands - November, 2020',
+      image: 'andaman_2.jpg',
+      name: 'Andaman Islands - November, 2019',
     },
     {
-      image: 'bhutan.jpg',
-      name: 'Bhutan - September, 2020',
+      image: 'bhutan_2.jpg',
+      name: 'Bhutan - September, 2019',
     },
     {
-      image: 'jaipur.jpg',
-      name: 'Jaipur, Bhangarh - July, 2020',
+      image: 'jaipur_bhangarh.jpg',
+      name: 'Jaipur, Bhangarh - July, 2019',
     },
     {
       image: 'badrinath.jpg',
-      name: 'Badrinath - July, 2020',
+      name: 'Badrinath - June, 2019',
     },
     {
       image: 'ranthambore.jpg',
-      name: 'Ranthambore - July, 2020',
+      name: 'Ranthambore - March, 2019',
     },
     {
       image: 'amritsar.jpg',
-      name: 'Amritsar - July, 2020',
+      name: 'Amritsar - Feb, 2019',
     },
     {
       image: 'goa_2.jpg',
-      name: 'Goa - Mumbai - July, 2020',
+      name: 'Goa - Mumbai - December, 2019',
     },
     {
       image: 'rameswaram_2.jpg',
-      name: 'Rameswara - Madurai - Hogenakkal - July, 2020',
+      name: 'Rameswaram - Madurai - Hogenakkal - November, 2018',
     },
   ];
   showMap: boolean = false;
