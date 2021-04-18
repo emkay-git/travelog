@@ -1,10 +1,9 @@
-<section style="padding: 10%; height: 100%" class="blue">
-  <div style="height: 60%">
+<section class="intro">
+  <div class="intro-text">
     <ngx-typed-js
       [contentType]="'html'"
       [strings]="[
-        'Hi! ^1000 <br> I am Mohit ^1000 <br> Me solving world problems by writing code ^1000 <br> Travel and Food are my hobbies ^1000 <br> 
-  Trying to learn cooking and reading these days '
+        'Hi! ^1000 <br> I am Mohit ^1000 <br> Me solving world problems by writing code ^1000 <br> Travel and Food are my hobbies ^1000 <br> Trying to learn cooking and reading these days '
       ]"
     >
       <h2 class="typing"></h2>
@@ -38,13 +37,16 @@
     <app-teaser
       [placeName]="data.name"
       [backgroundImage]="data.image"
-      [width]="350"
-      [height]="350"
+      [width]="this.cardWidth"
+      [height]="this.cardHeight"
     ></app-teaser>
   </ng-container>
 </section>
 
 <section id="travel">
-  I swear this would have been better without the Pandemic
+  <span style="color: #f5e0da"
+    >I swear this would have been better without the Pandemic</span
+  >
+
   <app-map></app-map>
 </section>

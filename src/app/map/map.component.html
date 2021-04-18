@@ -1,25 +1,45 @@
 <div class="container-fluid">
   <div class="row">
-      <div id="map" class="col-md-12 shadow bg-white rounded m-3 p-2" ></div>
+    <div id="map" class="col-md-12 shadow bg-white rounded"></div>
   </div>
 </div>
 
-
-<app-teaser id="popup" [title]="hoveredPlace['teaseText']" [placeName]="hoveredPlace['title']" [backgroundImage]="hoveredPlace['teaseImage']"></app-teaser>
+<app-teaser
+  id="popup"
+  [title]="hoveredPlace['teaseText']"
+  [placeName]="hoveredPlace['title']"
+  [backgroundImage]="hoveredPlace['teaseImage']"
+></app-teaser>
 
 <!-- Button trigger modal -->
-<button style="display:none" id="buttonText" type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialog">
-    Launch demo modal
+<button
+  style="display: none"
+  id="buttonText"
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#dialog"
+>
+  Launch demo modal
 </button>
 
-
 <div id="dialog" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document modal-sm" [ngClass]="{'modal-xl':this.clickedPlace['storyImages']&&this.clickedPlace['storyImages'].length>0}">
-      <div class="modal-content"> 
-        <div class="modal-body" style="padding:0">
-           <app-story [storyText]="this.clickedPlace['storyText']" [data]="this.clickedPlace['storyImages']"></app-story>
-        </div>
+  <div
+    class="modal-dialog modal-dialog-centered"
+    role="document modal-sm"
+    [ngClass]="{
+      'modal-xl':
+        this.clickedPlace['storyImages'] &&
+        this.clickedPlace['storyImages'].length > 0
+    }"
+  >
+    <div class="modal-content">
+      <div class="modal-body" style="padding: 0">
+        <app-story
+          [storyText]="this.clickedPlace['storyText']"
+          [data]="this.clickedPlace['storyImages']"
+        ></app-story>
+      </div>
     </div>
   </div>
 </div>
-

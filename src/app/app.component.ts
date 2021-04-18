@@ -78,12 +78,61 @@ export class AppComponent {
       image: 'rameswaram_2.jpg',
       name: 'Rameswaram - Madurai - Hogenakkal - November, 2018',
     },
+    {
+      image: 'matheran_2.jpg',
+      name: 'Matheran - October, 2018',
+    },
+    {
+      image: 'andharban_2.JPG',
+      name: 'Andharban - June, 2018',
+    },
+    {
+      image: 'torna.jpg',
+      name: 'Torna Fort - June, 2018',
+    },
+    {
+      image: 'murud_janjira.jpg',
+      name: 'Murud Janjira - January, 2018',
+    },
+    {
+      image: 'aurangabad_2.jpg',
+      name: 'Ajanta - Ellora - Aurangabad - December, 2017',
+    },
   ];
   showMap: boolean = false;
+
+  cardHeight = 350;
+  cardWidth = 350;
+
   public ngOnInit(): void {
+    this.initCardDimen();
+
     fetch('assets/data/location.json')
       .then((data) => data.json())
       .then((data) => this.prefetchImages(data['places']));
+
+    window.onresize = (data) => this.changeCardsDimen(data);
+  }
+
+  initCardDimen() {
+    if (window.innerWidth <= 350) {
+      this.cardHeight = 300;
+      this.cardWidth = 300;
+    } else if (window.innerWidth <= 480) {
+      this.cardHeight = 350;
+      this.cardWidth = 350;
+    } else {
+      this.cardHeight = 450;
+      this.cardWidth = 450;
+    }
+  }
+
+  changeCardsDimen(currentWindowSize) {
+    const width = currentWindowSize.target.innerWidth;
+    if (width > 480) {
+      this.cardWidth = 450;
+      this.cardHeight = 450;
+    }
   }
 
   private prefetchImages(locations: Destination[]): void {

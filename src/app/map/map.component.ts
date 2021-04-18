@@ -32,6 +32,7 @@ export class MapComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.initZoomLevel();
     fetch('assets/data/location.json')
       .then((data) => data.json())
       .then((data) => {
@@ -40,6 +41,16 @@ export class MapComponent implements OnInit {
         this.addTeaserOverlay();
         this.addEventsOnMap();
       });
+  }
+
+  zoom = 5;
+
+  initZoomLevel() {
+    if (window.innerWidth <= 480) {
+      this.zoom = 4;
+    } else {
+      this.zoom = 5;
+    }
   }
 
   checkFeature(e) {
@@ -66,7 +77,7 @@ export class MapComponent implements OnInit {
       this.popup.setPosition(null);
     }
   }
-
+  centerCoord = [79.1025, 22.7041];
   initMap(destination: Destination[]): void {
     this.map = new Map({
       target: 'map',
@@ -81,8 +92,8 @@ export class MapComponent implements OnInit {
         this.markerLayers(destination),
       ],
       view: new View({
-        center: olProj.fromLonLat([77.1025, 28.7041]),
-        zoom: 5,
+        center: olProj.fromLonLat(this.centerCoord),
+        zoom: this.zoom,
       }),
     });
   }
